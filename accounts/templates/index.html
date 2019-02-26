@@ -12,11 +12,19 @@
     <nav>
         <ul>
             <li> <a href="#">Login</a> </li>
-            <li> <a href="#">Log Out</a> </li>
+            <li> <a href="{% url 'logout' %}">Log Out</a> </li>
             <li> <a href="#">Register</a> </li>
             <li> <a href="#">Profile</a> </li>
         </ul>
     </nav>
+    <hr>
+    {% if messages %}
+    <div class="">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
 </body>
 
 </html>
